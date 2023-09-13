@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登记存入</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/store.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">主页</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/" method="post">
+            <label for="stuff">物品名</label>
+            <input type="text" id="stuff" name="stuff">
+            <button type="submit">存入</button>
+            <button type="submit" formaction="/store-reset" method="post">用户登出</button>
+        </form>
+    </main>
+</body>
+</html>

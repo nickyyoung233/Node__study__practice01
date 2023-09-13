@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.format.enable": true
+  }
+}
