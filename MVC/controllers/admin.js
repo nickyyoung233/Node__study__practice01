@@ -10,27 +10,21 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.postAddProduct = (req, res, next) => {
-  new Product({ t: req.body.title, p: req.body.price }).store();
+  const defaultUrl =
+    "https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2650&q=80";
+  new Product({
+    title: req.body.title,
+    price: req.body.price,
+    imgUrl: req.body.imgUrl === "" ? defaultUrl : req.body.imgUrl,
+    des: req.body.des,
+  }).store();
   res.redirect("/products");
 };
-
-exports.getProducts = async (req, res, next) => {
-  const products = await Product.fetchAll();
-  res.render("shop/product-list", {
-    prods: products,
-    pageTitle: "Shop",
-    path: "/products",
-    hasProducts: products.length > 0,
-    activeShop: true,
-    productCSS: true,
-  });
-};
-
 exports.getAdminProducts = async (req, res, next) => {
   const products = await Product.fetchAll();
   res.render("admin/product-list", {
     prods: products,
-    pageTitle: "Shop",
+    pageTitle: "Admin Shop",
     path: "/admin/products",
     hasProducts: products.length > 0,
     activeShop: true,

@@ -12,9 +12,11 @@ const getProductsFromFile = () => {
 };
 
 module.exports = class Product {
-  constructor({ t, p }) {
-    this.title = t;
-    this.price = Number(p).toFixed(2);
+  constructor({ title, imgUrl, price, des }) {
+    this.title = title;
+    this.imgUrl = imgUrl;
+    this.price = Number(price).toFixed(2);
+    this.des = des;
   }
   async store() {
     // fs.readFile(_path, (err, data) => {
@@ -28,6 +30,7 @@ module.exports = class Product {
     //     console.log(err);
     //   });
     // });
+    this.id = Math.random().toFixed(3);
     let products = await getProductsFromFile();
     products.push(this);
     fs.writeFile(_path, JSON.stringify(products), (err, data) => {
@@ -43,5 +46,10 @@ module.exports = class Product {
     //   }
     //   return JSON.parse(data);
     // });
+  }
+
+  static async findById(id) {
+    const products = await getProductsFromFile();
+    return products.find((p) => p.id === id);
   }
 };

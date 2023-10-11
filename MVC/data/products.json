@@ -1,1 +1,30 @@
-[{"title":"book","price":"12.00"},{"title":"game","price":"24.00"},{"title":"skateboard","price":"299.00"}]
+[
+  {
+    "id": "0.234",
+    "title": "Barbie",
+    "imgUrl": "https://images.unsplash.com/photo-1563475454428-db1b68095419?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80",
+    "price": "24.00",
+    "des": "This is a cute doll"
+  },
+  {
+    "id": "0.214",
+    "title": "Skateboard",
+    "imgUrl": "https://images.unsplash.com/photo-1567606940890-717aec672c0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80",
+    "price": "299.00",
+    "des": "A hand-made skateboard has good quality"
+  },
+  {
+    "id": "0.344",
+    "title": "Toy",
+    "imgUrl": "https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2650&q=80",
+    "price": "12.00",
+    "des": "nothing special"
+  },
+  {
+    "id": "0.222",
+    "title": "Hitman3",
+    "imgUrl": "https://assets-prd.ignimgs.com/2020/09/11/hitman-3-button-2020-v1-1599867593904.jpg",
+    "price": "299.00",
+    "des": "This is a game about the killer missions"
+  }
+]
