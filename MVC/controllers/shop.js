@@ -37,16 +37,14 @@ exports.getCart = (req, res, next) => {
   });
 };
 exports.postCart = (req, res, next) => {
-  Product.findById(req.body.productId).then(async (product) => {
-    // await new Cart(product).store();
-    // const cart = await Cart.fetchAll();
-    res.render("shop/cart", {
-      pageTitle: "Cart",
-      path: "/cart",
-      productCSS: true,
-      // cart: cart,
-    });
-  });
+  Cart.addProduct(req.body.productId, req.body.productPrice);
+  // res.render("shop/cart", {
+  //   pageTitle: "Cart",
+  //   path: "/cart",
+  //   productCSS: true,
+  //   // cart: cart,
+  // });
+  res.redirect("/cart");
 };
 exports.getCheckOut = (req, res, next) => {
   res.render("shop/checkout", {
